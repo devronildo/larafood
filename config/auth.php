@@ -63,7 +63,7 @@ return [
     |
     | Supported: "database", "eloquent"
     |
-    */  cd  c:\
+    */
 
     'providers' => [
         'users' => [
