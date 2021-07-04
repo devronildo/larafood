@@ -18,6 +18,8 @@ class DetailPlanController extends Controller
     public function __construct(DetailPlan $detailPlan, Plan $plan){
          $this->repository =  $detailPlan;
          $this->plan = $plan;
+
+         $this->middleware(['can:plans']);
     }
 
     public function index($urlPlan){
@@ -82,7 +84,7 @@ class DetailPlanController extends Controller
         $detail->update($request->all());
 
      return redirect()->route('details.plan.index', $plan->url);
-  
+
     }
 
     public function show($urlPlan, $idDetail){
@@ -113,7 +115,7 @@ class DetailPlanController extends Controller
      return redirect()
             ->route('details.plan.index', $plan->url)
             ->with('message', 'Registro deletado com sucesso');
-  
+
     }
 
 }
