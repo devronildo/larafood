@@ -10,7 +10,10 @@ use App\Observers\PlanObserver;
 use App\Observers\CategoryObserver;
 use App\Observers\TenantObserver;
 use App\Observers\ProductObserver;
+
+
 use Illuminate\Support\ServiceProvider;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+
     }
 
     /**
