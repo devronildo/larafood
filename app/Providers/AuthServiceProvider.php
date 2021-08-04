@@ -27,6 +27,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        if($this->app->runningInConsole()) return;
+
         $permissions = Permission::all();
 
         foreach($permissions as $permission){

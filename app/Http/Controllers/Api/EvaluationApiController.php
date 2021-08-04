@@ -20,6 +20,8 @@ class EvaluationApiController extends Controller
         $data = $request->only('stars', 'comment');
         $evaluation = $this->evaluationService->createNewEvaluation($request->identifyOrder, $data);
 
-        return new EvaluationResource($evaluation);
+        return (new EvaluationResource($evaluation))
+                  ->response()
+                  ->setStatusCode(201);
    }
 }
