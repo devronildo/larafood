@@ -52,6 +52,7 @@ Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function()
     /*
         Routes Tables
     */
+    Route::get('tables/qrcode/{identify}', 'TableController@qrcode')->name('tables.qrcode');
     Route::any('tables/search', 'TableController@search')->name('table.search');
     Route::resource('tables', 'TableController');
 
@@ -138,7 +139,7 @@ Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function()
 
 
     /* Home Dashboard */
-    Route::get('/', 'PlanController@index')->name('admin.index');
+    Route::get('/', 'DashboardController@home')->name('admin.index');
 
 });
 
