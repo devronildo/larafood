@@ -1,5 +1,6 @@
 <?php
 
+namespace Database\Seeders;
 
 use App\Models\Plan;
 use App\Models\Tenant;

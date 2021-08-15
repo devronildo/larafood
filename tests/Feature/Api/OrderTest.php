@@ -174,7 +174,7 @@ class OrderTest extends TestCase
             ]);
         }
 
-        $response = $this->postJson('/api/v1/orders', $payload);
+        $response = $this->postJson('/api/auth/v1/orders', $payload);
 
         $response->assertStatus(201);
     }
